@@ -18,11 +18,11 @@ $ConfigurationData = @{
         },
         #however, each node still needs to be explicitly defined for "*" to have meaning
         @{
-            NodeName = "srv4-10264-831a"
+            NodeName = "testMachine1"
         },
         #we can also use a property to define node-specific passwords, although this is no more secure
         @{
-            NodeName = "srv4-10264-832a";
+            NodeName = "testMachine2";
             UserName = "zach"
             LocalPass = "ThisIsYetAnotherPlaintextPassword"
         }
@@ -30,7 +30,7 @@ $ConfigurationData = @{
 }
 configuration unencryptedPasswordDemo
 {
-    Node "srv4-10264-831a"
+    Node "testMachine1"
     {
         #we use the plaintext password to generate a new account
         User zach
@@ -61,7 +61,7 @@ configuration unencryptedPasswordDemo
     }
 
     
-    Node "srv4-10264-832a"
+    Node "testMachine2"
     {
         #now let's allocate the node-specific password to this machine
         $password = $Node.LocalPass | ConvertTo-SecureString -asPlainText -Force
