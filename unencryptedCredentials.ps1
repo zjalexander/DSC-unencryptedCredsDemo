@@ -104,4 +104,4 @@ unencryptedPasswordDemo -ConfigurationData $ConfigurationData
 #-verbose: so we can see what's going on and catch any errors
 #-force: for testing purposes, I run start-dscconfiguration frequently + want to make sure i'm
 #        not blocked by previous configurations that are still running
-Start-DscConfiguration ./sqlDemo -verbose -wait -force
+Start-DscConfiguration ./unencryptedPasswordDemo -verbose -wait -force
