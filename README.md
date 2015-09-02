@@ -6,7 +6,7 @@ Files contained in this archive:
 *unencryptedCredentials.ps1* : A PowerShell script file containing a Configuration function and Configuration Data.
 This configuration is intended as a use case for DSC Plaintext passwords (`PSDscAllowPlainTextPassword`). A variety of methods for storing and retrieving the password are used. All of these are **extremely unsecure**.
 
-*"\unencryptedPasswordDemo"* : Contains the MOF files generated as a result of running the aforementioned configuration. **These MOFs contain passwords in plain text**. This is included to demonstrate how easy it is to recover passwords when you use the insecure option. These MOF files are also present on the managed node, which means anyone with access to either computer now has access to the local administrator password.
+*"\unencryptedPasswordDemo"* : Contains the MOF files generated as a result of running the aforementioned configuration. **These MOFs contain passwords in plain text**. This is included to demonstrate how easy it is to recover passwords when you use the insecure option. These MOF files are also present on the managed node, which means anyone who has the local administrator access neccessary to retrieve those MOFs can easily retrieve passwords for other accounts.
 Specifically,
 ```
 instance of MSFT_UserResource as $MSFT_UserResource1ref
